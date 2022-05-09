@@ -1,0 +1,29 @@
+<%- include("./partials/head") %>
+
+
+    <body>
+        <%- include ("./partials/header") %>
+            <main>
+                <h2>Editando el celular <%= userEdit.nombre %>
+                </h2>
+
+                <form action="/editar?_method=PUT" method="POST">
+                    <label for="">Equipo </label>
+                    <input type="text" name="nombre" value="<%= userEdit.nombre %> ">
+                    <input type="submit" name="editar" value="editar">
+                </form>
+
+
+
+                <br>
+                <label for="precio">Precio</label>
+                <input type="text" name="precio" value="<%= userEdit.precio %> ">
+                <input type="submit" name="editar" value="editar">
+                <br>
+                <input type="submit" value="Registarnos">
+
+
+            </main>
+    </body>
+
+    </html>

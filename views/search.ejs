@@ -1,0 +1,33 @@
+<%- include("./partials/head") %>
+
+
+<body>
+  <%- include ("./partials/header") %> 
+  <main>
+<h2>query</h2>
+
+<article>
+    <% listadoPrecio.forEach(celular => { %>
+
+        <ul>
+            <li><%= celular.nombre %> </li>
+            <li><%=celular.precio  %> </li>
+        </ul>
+               
+              <% }) %> 
+          
+
+</article>
+<section>
+<h2>realize la busqueda por precio minimo</h2>
+<form action="/search" method="get">
+<input type="text" name="search">
+<input type="submit" value="search">
+</form>
+
+
+</section>
+
+  </main>
+</body>
+</html>

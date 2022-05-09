@@ -1,0 +1,24 @@
+<%- include("./partials/head") %>
+
+
+<body>
+  <%- include ("./partials/header") %> 
+  <main>
+<h2>query</h2>
+
+<form action="/registro" method="post">
+    <label for="usuario">usuario</label>
+<input type="text" name="usuario">
+<br>
+<label for="email">correo electronico</label>
+<input type="email" name="email" id="">
+<br>
+<label for="password">contraseña</label>
+<input type="password" name="pasword">
+<br>
+<input type="submit" value="Registarnos">
+</form>
+
+  </main>
+</body>
+</html>
