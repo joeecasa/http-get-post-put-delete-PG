@@ -65,19 +65,18 @@ const MainController = {
             contraseña: req.body.password
 
         }
-
-
         // primero : leer que cosas ya habia por que si yo ya tenia usuarios registrados no quiero pisarlos
-        let archivoUsuario = fs.readFileSync("usuarios.json", { encoding: "utf-8" })
+        //let archivoUsuario = fs.readFileSync("usuarios.json", { encoding: "utf-8" })
+        // se hace asi pero lo comente por q ya esta leida mas arriba
         // definimos la variable usuarios antes del if para poder usarla
         let usuarios
         // el archivo usuarios.json puede estar vacio( este es el caso ) por eso hacemos un if para q arranque vacio el array
-        if (archivoUsuario == "") {
+        if (usersJSON == "") {
             usuarios = []
         } else {
             // por el contrario, si el archivo ya tenia contenido lo descomprimimos pasandolo con json.parse a objeto literal para poder
             //manipularlo con JS
-            usuarios = JSON.parse(archivoUsuario)
+            usuarios = JSON.parse(usersJSON)
         }
 
         usuarios.push(usuario)
@@ -101,7 +100,7 @@ const MainController = {
     },
 
     editarput: (req, res) => {
-        res.redirect("/editar")
+        res.send("producto editado")
     },
 
     editarget: (req, res) => {

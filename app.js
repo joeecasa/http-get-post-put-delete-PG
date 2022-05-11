@@ -22,8 +22,8 @@ const rutasMain = require ("./routes")
 app.use("/", rutasMain)
 
 //una vez instalado el metodo method.override con npm install method-override --save hay que configurarlo de esta manera
-const methodOverride = require("method-override")
-app.use(methodOverride("_method"))
+const methodOverride =  require('method-override');
+app.use(methodOverride('_method'));
 
 //para que funcione el 404
 app.use(function(req, res, next) {

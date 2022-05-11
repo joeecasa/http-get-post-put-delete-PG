@@ -7,21 +7,17 @@
                 <h2>Editando el celular <%= userEdit.nombre %>
                 </h2>
 
-                <form action="/editar?_method=PUT" method="POST">
+                <form action="/editar/<%=userEdit.id%>?_method=PUT" method="post">
                     <label for="">Equipo </label>
                     <input type="text" name="nombre" value="<%= userEdit.nombre %> ">
-                    <input type="submit" name="editar" value="editar">
-                </form>
-
-
-
+                    <button type="submit" name="editar" >editar producto </button>
                 <br>
                 <label for="precio">Precio</label>
                 <input type="text" name="precio" value="<%= userEdit.precio %> ">
                 <input type="submit" name="editar" value="editar">
                 <br>
                 <input type="submit" value="Registarnos">
-
+            </form>
 
             </main>
     </body>

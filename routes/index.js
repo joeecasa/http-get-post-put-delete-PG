@@ -8,8 +8,12 @@ router.get("/search", MainController.search)
 router.get("/registro", MainController.registro)
 router.post("/registro",MainController.guardarRegistro)
 router.get("/editar/:id", MainController.editarid)
-router.get("/editar", MainController.editarget)
-router.put("/editar", MainController.editarput)
+
+
+
+router.put("/editar/:id", MainController.editarput)
+
+
 router.get("/usuarios", MainController.usuarios)
 
 
